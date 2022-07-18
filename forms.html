@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<body>
+<form action="first.php" method="get">
+    <p>Select the chief:</p>
+    <select name="chief" id = "FirstChief" onclick="localStorage.setItem('FirstChief', savedFirst.value)">
+        <option>chief-1</option>
+        <option>chief-2</option>
+        <option>chief-3</option>
+    </select>
+    <p><input  type="submit"/></p>
+</form>
+<form action="second.php" method="get">
+    <p>Select the chief:</p>
+    <select name="ch" id = "SecondChief" onclick="localStorage.setItem('SecondChief', savedSecond.value)">
+        <option>chief-1</option>
+        <option>chief-2</option>
+        <option>chief-3</option>
+    </select>
+    <p><input  type="submit"></p>
+</form>
+
+<form action="third.php" method="get">
+    <p>Select the project name:</p>
+    <select name="project" id = "Project" onclick="localStorage.setItem('Project', savedThird1.value)">
+        <option>project-1</option>
+        <option>project-2</option>
+        <option>project-3</option>
+        <option>project-4</option>
+    </select>
+    <p>Select the date:</p>
+    <input type="date" id="date" name="date" onchange="localStorage.setItem('Date', savedThird2.value)"/>
+    <p ><input  type="submit"/></p>
+</form>
+<script>
+
+    const savedFirst = document.getElementById("FirstChief");
+    savedFirst.value = localStorage.getItem('FirstChief');
+    
+    const savedSecond = document.getElementById("SecondChief");
+    savedSecond.value = localStorage.getItem('SecondChief');
+
+    const savedThird1 = document.getElementById("Project");
+    savedThird1.value = localStorage.getItem('Project');
+
+    const savedThird2 = document.getElementById("date");
+    savedThird2.value = localStorage.getItem('date');
+
+    
+</script>
+</body>
+</html>
+
+
+
+
+
+
